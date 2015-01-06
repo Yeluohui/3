@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>视频</title>
+	<!--  <link rel="stylesheet" type="text/css" href="style.css" /> -->
+	 <style>
+	    .imgbox
+        {
+             width: 900px;
+             height: 450px;
+             margin-left: 100px;
+             position: absolute;
+             top: 80px;
+             /* border: 1px solid red; */
+
+        }
+
+
+        #nav
+        {
+        	width: 250px;
+        	height: 450px;
+        	display: block;
+        	position: absolute;;
+        	background-color: #f3f3f3;
+        }
+
+
+        #nav a
+        {
+        	height: 16.66%;
+        	width: 90%;
+        	padding: 15px 0 0 16px;
+        	
+        	display: block;
+        }
+
+        #b
+        {
+        	color: #666;
+            font-size: 14px;
+            font-weight: bold;
+            height: 16px;
+          
+
+        }
+
+        #t
+        {
+        	color: #666;
+            font-size: 12px;
+            margin-top: 8px;
+            height: 16px;
+        }
+
+
+        
+
+
+        .imgbox .cont
+        {
+        	float: right;
+        	width: 640px;
+        	height: 450px;
+        	/* border: 1px solid red;
+        	         */        }
+
+        .imgbox .cont ul
+        {
+          list-style: none;
+        	margin:0px; padding:0px;
+        }
+
+       /*  #l 
+       {
+         width: 640px;
+         height: 440px;
+       
+       } */
+
+        .cont li
+        {
+          width: 640px;
+          height: 440px;
+        }
+
+
+        .imgbox .cont img
+        {
+        	width: 100%;
+        	height: 100%;
+        }
+
+
+
+
+
+
+     .z_top_container
+	   {
+	   	height:50px;
+	   }
+
+	   .z_top
+	   { 
+	   	height: 60px; 
+	   	background:#f1f1f1; 
+	   	border-bottom:2px solid #00a1d6;
+	   	top:0;left:0;width: 100%; 
+	   	z-index: 99999;
+	   }
+
+
+	   .z_top .z_top_nav
+	   { 
+	   	float:left; 
+	   	height:50px;
+	   	 margin: 0 auto;
+	   	}
+
+
+       .z_top .z_top_nav li
+       {
+       	float:left; 
+       	text-align:center; 
+       	line-height:30px; 
+       	width:90px;
+       	margin-right:10px;
+       	position: relative;
+       	font-size:20px;}
+       
+       .num
+       { 
+       	height: 40px; 
+       	position:absolute; 
+       	top:60px; 
+       	left:0;
+       	width:100%;
+       	background:#fff; 
+        border-top: #ddd 1px solid;
+       	border-bottom: #ddd 1px solid;
+       	}
+
+
+       .num .menu
+       {
+       	position: relative;
+       	width: 980px;
+       	margin: 0 50px;
+       }
+
+
+       .num li
+       { 
+       	float:left; 
+       	position:relative; 
+       	font-size: 17px; 
+       	text-align:center; 
+       	display:block;
+       	margin: 0 25px;
+       }
+
+       #search 
+       {
+       	position: absolute;
+       	top: 0px;
+       	right: 0;
+       	width: 240px;
+       	height: 40px;
+       }
+
+
+
+       .box
+       {
+       	width: 1300px;
+       	position:absolute; 
+       	top:550px;
+       	margin-left: 30px;
+       }
+
+
+
+       .box .box1
+       {
+       	width: 750px;
+       	height: 500px;
+       	display: inline;
+       	float: left;
+       }
+
+
+
+       .box .box1 .header
+       {
+       	float: left;
+       	margin: 10px 20px;
+       	width: 750px;
+       	height: 30px;
+       	font-size: 30px;
+       	font-family: "微软雅黑";
+        
+       }
+
+
+
+
+       .box .box1 .preview
+       {
+       	float: left;
+       	height: 150px;
+       	width: 200px;
+       	border: solid 1px rgb(175, 170, 152);;
+       	margin: 0px 20px 15px 0px;
+       }
+
+
+
+       .box .box1 .preview .pic
+       {
+       	float:left;
+       	width:200px;
+       	height:110px;
+       	border: 1px solid #f5f5f5;
+       	top: 0;left: 0;
+       	z-index: 1;
+       }
+
+
+
+       .box .box1 .preview .cont
+       {
+       	float:left;
+       	width:158px;
+       	font-size: 15px;
+       	margin: 10px 10px 10px 5px;
+       }
+
+       
+       .box .box2
+       {
+       	width: 200px;
+       	height: 360px;
+       	display: inline;
+       	float:right;
+       	margin:35px 200px 0px 0px;
+       }
+
+
+
+
+       .box .box2 .header
+       {
+       	width: 100%;
+       	height: 30px;
+        border-bottom: 1px solid #58bbb8;
+       }
+
+
+
+
+       .box .box2 .header .left
+       {
+       	float: left;
+       	font-size: 30px;
+       	line-height:20px;
+       }
+
+
+
+       .box .box2 .preview
+       {
+       	width: 100%;
+       	height: 350px;
+        margin-top: 20px;
+
+       }
+
+
+
+
+       .box2 .preview a
+       {
+       	width: 250px;
+       	height: 30px;
+       	margin-bottom: 5px;
+        font-size:18px;
+        font-family:"宋体";
+        display: block;
+        
+       }
+
+
+
+/* 
+       .box .box2 .preview .li .name
+       {
+         font-size:18px;
+         font-family:"宋体";
+       }
+ */
+
+
+       li
+       {
+              list-style-type:none;
+       }
+
+
+
+
+
+       a 
+       {
+       	
+       	font-family: "微软雅黑";
+       }
+
+
+         a:link { color: #545454; text-decoration: none;}
+         a:visited {text-decoration: none; color: #545454;}
+         a:hover {text-decoration: none; color:#eb0102;}
+         a:active {text-decoration: none; color:#eb0102;}
+
+        
+
+        .outset {border:outset 5px #9BD6D4}
+        .inset{border: 0}
+
+
+        
+	 </style>
+</head>
+
+
+<body>
+	<div class="z_top_container">
+		<div class="z_top">
+			<div class="z_top_nav">
+				<ul>
+					<li>
+						<a  href="http://www.bilibili.com/">主站</a>
+					</li>
+					
+					<li>
+						<a  href="http://h.bilibili.com/">画友</a>
+                    </li>    
+					    
+                    <li>
+                    	<a  href="http://game.bilibili.com/">游戏中心</a>
+                    </li>
+
+                    <li>
+                    	<a  target="_blank" href="http://live.bilibili.com">直播</a>
+                    </li>
+				</ul>
+			</div>	
+		</div>
+	</div>				
+
+	<div class="num">
+		<div class="menu">
+			<ul>
+        <li>
+					<a href="http://www.youku.com/" >首页</a>
+				</li>
+				<li>
+					<a href="http://tv.youku.com/">电视剧</a>
+				</li>
+				<li>
+					<a href="http://movie.youku.com/">电影</a>
+				</li>
+				<li>
+					<a href="http://zy.youku.com/">综艺</a>
+				</li>
+				<li>
+					<a href="http://music.youku.com/">音乐</a>
+				</li>
+				<li>
+					<a href="http://comic.youku.com/">动漫</a>
+				</li>
+				<li>
+					<a href="http://www.youku.com/v">全部</a>
+				</li>
+			</ul>
+		  <div id="search">
+		  	<input name="keyword" type="text" style="border:soild 1px ;box-shadow:none;"
+		  </div>
+		    <button type="button">查询</button>
+		</div>
+	</div>
+	<div class="imgbox">
+		<div id="nav">
+			<a href="" onmousemove="moveto(0);clearauto();" onmouseout="setauto()" >
+				<p id="b">
+					哥谭市
+				</p>
+				<p id="t">
+					第8集
+				</p>
+			</a>
+			<a href="" onmousemove="moveto(1);clearauto();" onmouseout="setauto()">
+				<p id="b">
+					神盾局 第二季
+				</p>
+				<p id="t">
+					第6集
+				</p>
+			</a>
+			<a href="" onmousemove="moveto(2);clearauto();" onmouseout="setauto()">
+				<p id="b">
+					行尸走肉 第五季
+				</p>
+				<p id="t">
+					第7集
+				</p>
+			</a>
+			<a href="" onmousemove="moveto(3);clearauto();" onmouseout="setauto()">
+				<p id="b">
+					闪电侠
+				</p>
+				<p id="t">
+					第9集
+				</p>				
+			</a>
+			<a href="" onmousemove="moveto(4);clearauto();" onmouseout="setauto()">
+				<p id="b">
+					绿箭侠
+				</p>
+				<p id="t">
+					第6集
+				</p>
+			</a>
+			
+		</div>
+		<div class="cont">
+			<ul id="tu">
+				<li onmousemove="moveto(0);clearauto();" onmouseout="setauto()">
+					<a href="">
+				        <img src="getan.jpg" >
+			    </a>
+				</li>
+				<li style=display:none; onmousemove="moveto(1);clearauto();" onmouseout="setauto()">
+					<a href="">
+				        <img src="shield.jpg" >
+			     </a>
+				</li>
+				<li style=display:none; onmousemove="moveto(2);clearauto();" onmouseout="setauto()">
+					<a href="">
+				        <img src="zom.jpg" >
+			     </a>
+				</li>
+				<li style=display:none; onmousemove="moveto(3);clearauto();" onmouseout="setauto()">
+					<a href="">
+				        <img src="flash.jpg" >
+			     </a>
+				</li>
+				<li style=display:none; onmousemove="moveto(4);clearauto();" onmouseout="setauto()">
+					<a href="">
+				        <img src="arrow.jpg" >
+			    </a>
+				</li>
+
+			</ul>
+			
+			
+			
+		</div>
+		
+	</div>
+	<div class="box">
+	
+	   <div class="box1">
+		  <div class="header">
+			<span>热门美剧</span>
+		  </div>
+		  
+		  <div class="preview">
+			<div class="pic" >
+				<a href="http://v.youku.com/v_show/id_XODI5OTI1NzMy.html"  title="闪电侠 第一季">
+				<img src="1.png">
+				</a>
+			</div>
+			<div class="cont">
+			    <a href="http://v.youku.com/v_show/id_XODI5OTI1NzMy.html"  title="闪电侠 第一季">闪电侠 第一季</a>
+			</div>
+		  </div>
+		  <div class="preview">
+		  	<div class="pic">
+		  		<a href="http://v.youku.com/v_show/id_XODMwNjUwNjE2.html"  title="绿箭侠 第三季">
+				<img src="2.png">
+				</a>
+		  	</div>
+		  	<div class="cont">
+		  		<a href="http://v.youku.com/v_show/id_XODMwNjUwNjE2.html"  title="绿箭侠 第三季">绿箭侠 第三季</a>
+		  	</div>
+		  </div>
+		  <div class="preview">
+		  	<div class="pic">
+		  		<a href="http://v.youku.com/v_show/id_XODMwNjUwNjE2.html"  title="绿箭侠 第三季">
+				<img src="2.png">
+				</a>
+		  	</div>
+		  	<div class="cont">
+		  		<a href="http://v.youku.com/v_show/id_XODMwNjUwNjE2.html"  title="绿箭侠 第三季">绿箭侠 第三季</a>
+		  	</div>
+		  	
+		  </div>
+		  <div class="preview">
+		  	<div class="pic">
+		  		<a href="http://v.youku.com/v_show/id_XODMwNjUwNjE2.html"  title="绿箭侠 第三季">
+				<img src="2.png">
+				</a>
+		  	</div>
+
+		  	<div class="cont">
+		  		<a href="http://v.youku.com/v_show/id_XODMwNjUwNjE2.html"  title="绿箭侠 第三季">绿箭侠 第三季</a>
+		  	</div>
+		  	
+		  </div>
+		  <div class="preview">
+		  	<div class="pic" >
+				<a href="http://v.youku.com/v_show/id_XODI5OTI1NzMy.html"  title="闪电侠 第一季">
+				<img src="1.png">
+				</a>
+			</div>
+
+			<div class="cont">
+			    <a href="http://v.youku.com/v_show/id_XODI5OTI1NzMy.html"  title="闪电侠 第一季">闪电侠 第一季</a>
+			</div>
+		  	
+		  </div>
+
+		  <div class="preview">
+		  	<div class="pic" >
+				<a href="http://v.youku.com/v_show/id_XODI5OTI1NzMy.html"  title="闪电侠 第一季">
+				<img src="1.png">
+				</a>
+			</div>
+
+			<div class="cont">
+			    <a href="http://v.youku.com/v_show/id_XODI5OTI1NzMy.html"  title="闪电侠 第一季">闪电侠 第一季</a>
+			</div>
+		  	
+		  </div>
+	  </div>
+	  
+
+	  <div class="box2">
+	  	<div class="header">
+	  		<div class="left">
+	  			<span>
+	  				电视剧排行
+	  			</span>
+	  		</div>
+	  		
+	  	</div>
+	  	<div class="preview">
+	  		
+	  			<a target="_blank" href="http://v.youku.com/v_show/id_XODAyMzYyNTI0.html" >1.行尸走肉 第五季</a>
+	  		
+
+	  		
+	  			<a target="_blank" href="http://v.youku.com/v_show/id_XNzk4OTA4ODMy.html" >2.闪电侠 第一季</a>
+	  		
+
+	  		
+	  			<a target="_blank" href="http://v.youku.com/v_show/id_XNzg5Mjk1MzAw.html" >3.神盾局特工 第二季</a>
+	  		
+
+	  		
+	  			<a target="_blank" href="http://v.youku.com/v_show/id_XNjIxMTc5MzE2.html" >4.行尸走肉 第四季</a>
+	  		
+
+	  		
+	  			<a target="_blank" href="http://v.youku.com/v_show/id_XNDkxMTg4MDg0.html" >5.行尸走肉 第三季</a>
+	  		
+	  		
+	  	</div>
+	  </div>
+    </div>
+</body>
+ <script>
+  window.onload=function()
+{
+    moveto(0);
+}
+    function byid(id)
+    {
+        return document.getElementById(id)
+    }
+    var navs=byid("nav").getElementsByTagName("a");
+    var images=byid("tu").getElementsByTagName("li");
+    /*alert(images.length);*/
+
+    //alert(navs[1].innerText);
+  /*  for (var i = 0; i < navs.length; i++) 
+    {
+        var nav_item=navs[i];
+        nav_item.onmouseover=function()
+        {
+            //alert(this.innerText);
+            var index=0;
+            for (var m = 0; m < navs.length; m++) 
+            {
+                if (this.innerText==navs[m].innerText) 
+                {
+                    index=m;
+                    break;
+                };
+                
+            };
+            
+
+            //alert(index);
+             
+            for (var j = 0; j < images.length; j++) {
+                images[j].style.display="none";
+            };
+            //alert(images.length);
+            images[index].style.display="";
+           
+        }
+   }; */
+
+ var n=0;
+  function moveto(value)
+  {
+  	n=value;
+    move(value);
+    bord(value);
+    
+  }
+  function move(value)
+  {
+   
+            for (var j = 0; j < images.length; j++) 
+            {
+                images[j].style.display="none";
+            }
+            //alert(images.length);
+            images[value].style.display="";
+  }
+
+  function bord(value)
+  {
+
+
+  	         for (var m = 0;  m< navs.length; ++m) 
+  	         {
+  	         	navs[m].className="inset";
+  	         }
+  	         navs[value].className="outset";
+  }
+
+   function clearauto()
+   {                                                                  
+     clearInterval(autostart)
+   }
+                                
+   function setauto()
+   {
+      autostart=setInterval("auto(n)",2500)
+   }
+
+
+   function auto()
+   {
+     n++;
+    if (n==5)
+    {
+   
+        n=0;
+    }
+    moveto(n);
+   }
+   setauto();
+
+ </script>
+</html>
